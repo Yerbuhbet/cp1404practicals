@@ -25,3 +25,13 @@ def evaluate_score(score):
         return "Passable"
     else:
         return "Bad"
+
+def display_menu():
+    print("\nMenu:")
+    print("(G)et a valid score")
+    print("(P)rint result")
+    print("(S)how stars")
+    print("(Q)uit")
+    return input("Enter your choice: ").upper()
+
+main()

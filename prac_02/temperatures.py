@@ -5,3 +5,6 @@ def main():
     fahrenheit = float(input("Enter temperature in Fahrenheit: "))
     celsius = convert_f_to_c(fahrenheit)
     print(f"{fahrenheit} F is {celsius} C")
+
+def convert_c_to_f(celsius):
+    return celsius * 9.0 / 5 + 32

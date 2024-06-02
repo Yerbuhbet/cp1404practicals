@@ -17,3 +17,11 @@ def get_valid_score():
         print("Invalid score. The score must be between 0 and 100.")
         score = float(input("Enter a valid score (0-100): "))
     return score
+
+def evaluate_score(score):
+    if score >= 90:
+        return "Excellent"
+    elif score >= 50:
+        return "Passable"
+    else:
+        return "Bad"

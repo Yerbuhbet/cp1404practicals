@@ -9,3 +9,8 @@ def get_password():
         print(f"Password must be at least {min_length} characters long.")
         password = input("Enter your password: ")
     return password
+
+def print_asterisks(password):
+    print('*' * len(password))
+
+main()

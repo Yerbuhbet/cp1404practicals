@@ -1,7 +1,11 @@
 # Setup empty function structures for file operations
 
 def write_name():
-    pass
+    out_file = open("name.txt", "w")
+    name = input("What is your name? ")
+    print(name, file=out_file)
+    out_file.close()
+
 
 def read_name():
     pass

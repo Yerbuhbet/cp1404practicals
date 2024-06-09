@@ -18,3 +18,11 @@ number1 = int(in_file.readline())
 number2 = int(in_file.readline())
 in_file.close()
 print(number1 + number2)
+# Quick Program 3 extended - sum of all numbers
+in_file = open("numbers.txt", "r")
+total = 0
+for line in in_file:
+    number = int(line)
+    total += number
+in_file.close()
+print(total)

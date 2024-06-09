@@ -14,3 +14,7 @@ MAX_DECREASE = 0.05  # 5%
 MIN_PRICE = 0.01
 MAX_PRICE = 1000.0
 INITIAL_PRICE = 10.0
+
+FILENAME = "stock_output.txt"
+# open output file for writing (this creates a new file if it doesn't exist)
+out_file = open(FILENAME, 'w')

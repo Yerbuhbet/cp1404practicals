@@ -1,9 +1,9 @@
 """
 CP1404/CP5632 - Practical
 Answer the following questions:
-1. When will a ValueError occur?
-2. When will a ZeroDivisionError occur?
-3. Could you change the code to avoid the possibility of a ZeroDivisionError?
+1. When will a ValueError occur? -> When non-integer values are entered.
+2. When will a ZeroDivisionError occur? -> When the denominator is zero (this script avoids it).
+3. Could you change the code to avoid the possibility of a ZeroDivisionError? -> Yes, by checking if the denominator is zero before division.
 """
 
 try:

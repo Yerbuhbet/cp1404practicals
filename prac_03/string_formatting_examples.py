@@ -35,3 +35,9 @@ for i, number in enumerate(numbers, 1):
 # Use f-string formatting to produce the output:
 print(f"{year} {name} for about ${cost + 0.1:,.0f}!")
 
+# Using a for loop with the range function and f-string formatting,
+# produce the following right-aligned output (DO NOT use a list):
+print("Using a for loop with f-string formatting:")
+for i in range(11):
+    power_of_two = 2 ** i
+    print(f"2 ^ {i:2} is {power_of_two:5}")

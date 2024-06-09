@@ -8,3 +8,7 @@ in_file = open("name.txt", "r")
 name = in_file.read().strip()
 in_file.close()
 print("Your name is", name)
+# Quick Program 2 using "with"
+with open("name.txt", "r") as in_file:
+    name = in_file.read().strip()
+print("Your name is", name)

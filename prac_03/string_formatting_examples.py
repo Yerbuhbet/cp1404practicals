@@ -20,3 +20,6 @@ print("My {0} was first made in {1} (that's right, {1}!)".format(name, year))
 
 # And with f-string formatting, introduced in Python 3.6 (do this)
 print(f"My {name} was first made in {year} (that's right, {year}!)")
+
+# Formatting currency (grouping with comma, 2 decimal places):
+print("My {} would cost ${:,.2f}".format(name, cost))  # str.format version

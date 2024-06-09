@@ -28,3 +28,7 @@ print("Random floating point number between 2.5 and 5.5:", random.uniform(2.5, 5
 
 # What did you see on line 3?
 # Answer: A random floating-point number between 2.5 and 5.5. The smallest could be just above 2.5 and the largest just below 5.5.
+
+# Code to produce a random number between 1 and 100 inclusive:
+random_number = random.randint(1, 100)
+print(f"Random number between 1 and 100: {random_number}")

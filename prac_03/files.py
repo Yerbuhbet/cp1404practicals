@@ -12,3 +12,9 @@ print("Your name is", name)
 with open("name.txt", "r") as in_file:
     name = in_file.read().strip()
 print("Your name is", name)
+# Quick Program 3
+in_file = open("numbers.txt", "r")
+number1 = int(in_file.readline())
+number2 = int(in_file.readline())
+in_file.close()
+print(number1 + number2)

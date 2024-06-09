@@ -20,6 +20,20 @@ def main():
     print(f"Your {len(password)} character password is valid: {password}")
 
 def is_valid_password(password):
-    return True  # Placeholder for validation logic
+    if not MIN_LENGTH <= len(password) <= MAX_LENGTH:
+        return False
+
+    number_of_lower = sum(1 for c in password if c.islower())
+    number_of_upper = sum(1 for c in password if c.isupper())
+    number_of_digit = sum(1 for c in password if c.isdigit())
+    number_of_special = sum(1 for c in password if c in SPECIAL_CHARACTERS)
+
+    if number_of_lower == 0 or number_of_upper == 0 or number_of_digit == 0:
+        return False
+    if IS_SPECIAL_CHARACTER_REQUIRED and number_of_special == 0:
+        return False
+
+    return True
+
 
 main()

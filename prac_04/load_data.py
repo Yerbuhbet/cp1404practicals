@@ -12,3 +12,9 @@ def load_data():
         data.append(parts)  # Append the list of parts to the data list
     input_file.close()
     return data
+def display_subjects(data):
+    """Display the details of each subject from the provided data."""
+    print("\nSubject Details\n----------------")
+    for subject_details in data:
+        subject_code, lecturer, student_count = subject_details
+        print(f"{subject_code} is taught by {lecturer} and has {student_count} students")

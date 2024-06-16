@@ -17,3 +17,4 @@ def generate_quick_pick():
         quick_pick.add(random.randint(MIN_NUMBER, MAX_NUMBER))
     return list(quick_pick)
 
+main()

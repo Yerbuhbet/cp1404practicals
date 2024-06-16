@@ -17,3 +17,6 @@ print(lowercase_full_names)
 almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
 numbers = [int(num) for num in almost_numbers]
 print(numbers)
+# List comprehension to create a list of numbers greater than 9
+big_numbers = [number for number in numbers if number > 9]
+print(big_numbers)

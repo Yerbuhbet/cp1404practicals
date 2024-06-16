@@ -8,3 +8,6 @@ print(first_initials)
 # Create a list containing the initials using list comprehension
 full_initials = [name.split()[0][0] + name.split()[1][0] for name in full_names]
 print(full_initials)
+# List comprehension to select names starting with 'A'
+a_names = [name for name in names if name.startswith('A')]
+print(a_names)

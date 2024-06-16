@@ -14,3 +14,6 @@ print(a_names)
 # List comprehension to convert all full names to lowercase
 lowercase_full_names = [name.lower() for name in full_names]
 print(lowercase_full_names)
+almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
+numbers = [int(num) for num in almost_numbers]
+print(numbers)

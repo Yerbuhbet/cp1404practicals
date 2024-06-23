@@ -15,8 +15,9 @@ def count_words(words):
     return word_counts
 
 def print_word_counts(word_counts):
-    """Print the word counts sorted alphabetically."""
+    """Print the word counts sorted alphabetically and aligned."""
+    max_length = max(len(word) for word in word_counts)
     for word in sorted(word_counts):
-        print(f"{word} : {word_counts[word]}")
+        print(f"{word:<{max_length}} : {word_counts[word]}")
 
 main()

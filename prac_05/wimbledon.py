@@ -8,4 +8,12 @@ def main():
     champions, countries = process_data(data)
     display_results(champions, countries)
 
+def read_data(filename):
+    with open(filename, "r", encoding="utf-8-sig") as file:
+        reader = csv.reader(file)
+        next(reader)  
+        data = [line for line in reader]
+    return data
+
+
 main()

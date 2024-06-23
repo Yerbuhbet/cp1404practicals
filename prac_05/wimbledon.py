@@ -28,4 +28,11 @@ def process_data(data):
             champions[champion] = 1
     return champions, sorted(countries)
 
+def display_results(champions, countries):
+    print("Wimbledon Champions:")
+    for champion, count in champions.items():
+        print(f"{champion} {count}")
+    print("\nThese countries have won Wimbledon:")
+    print(', '.join(countries))
+
 main()

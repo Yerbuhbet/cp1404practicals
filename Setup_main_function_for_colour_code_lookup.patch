@@ -1,0 +1,28 @@
+Subject: [PATCH] Setup main function for colour code lookup
+---
+Index: prac_05/hex_colours.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/prac_05/hex_colours.py b/prac_05/hex_colours.py
+new file mode 100644
+--- /dev/null	(revision d29cfff576912ae7a4d296fb77a4e60254cb6a72)
++++ b/prac_05/hex_colours.py	(revision d29cfff576912ae7a4d296fb77a4e60254cb6a72)
+@@ -0,0 +1,16 @@
++"""
++CP1404/CP5632 Practical
++Hex colour lookup
++"""
++HEX_COLOUR_CODES = {
++    "AliceBlue": "#f0f8ff",
++    "AntiqueWhite": "#faebd7",
++    "AntiqueWhite1": "#ffefdb",
++    "AntiqueWhite2": "#eedfcc",
++    "AntiqueWhite3": "#cdc0b0",
++    "AntiqueWhite4": "#8b8378",
++    "Aquamarine1": "#7fffd4",
++    "Aquamarine2": "#76eec6",
++    "Azure1": "#f0ffff",
++    "Azure2": "#e0eeee"
++}

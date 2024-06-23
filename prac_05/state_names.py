@@ -1,9 +1,7 @@
 """
 CP1404/CP5632 Practical
 State names in a dictionary
-File needs reformatting
 """
-
 
 CODE_TO_NAME = {
     "QLD": "Queensland",
@@ -14,18 +12,22 @@ CODE_TO_NAME = {
     "VIC": "Victoria",
     "TAS": "Tasmania"
 }
-print(CODE_TO_NAME)
-
-state_code = input("Enter short state: ").upper()
-while state_code != "":
-    if state_code in CODE_TO_NAME:
-        print(state_code, "is", CODE_TO_NAME[state_code])
-    else:
-        print("Invalid short state")
+def main():
+    """Get user state input and print the full state name."""
+    print_state_names()  # Display all states at the start
     state_code = input("Enter short state: ").upper()
     while state_code != "":
-        if state_code in CODE_TO_NAME:
-            print(state_code, "is", CODE_TO_NAME[state_code])
-        else:
+        try:
+            print(f"{state_code} is {CODE_TO_NAME[state_code]}")
+        except KeyError:
             print("Invalid short state")
         state_code = input("Enter short state: ").upper()
+
+def print_state_names():
+    """Print all state abbreviations and their full names."""
+    for code, name in CODE_TO_NAME.items():
+        print(f"{code} is {name}")
+
+
+
+main()

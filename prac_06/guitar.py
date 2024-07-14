@@ -12,3 +12,8 @@ class Guitar:
         self.name = name
         self.year = year
         self.cost = cost
+
+    def get_age(self):
+        """Get the age of the guitar in years."""
+        return 2022 - self.year  # or you can use datetime module to get the current year
+

@@ -14,5 +14,10 @@ def main():
 
     print(f"{python}\n{ruby}\n{visual_basic}\n{java}\n{cpp}")
 
+    print("\nThe dynamically typed languages are:")
+    for language in languages:
+        if language.is_dynamic():
+            print(language.name)
+
 if __name__ == '__main__':
     main()

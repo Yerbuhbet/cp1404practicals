@@ -1,52 +1,43 @@
-from project import Project
+"""
+CP1404/CP5632 Practical - Suggested Solution
+Programming Language class with tests.
+"""
 
-def main():
-    print("Welcome to Pythonic Project Management")
-    # Placeholder for menu implementation
-def load_projects(file_name):
-    projects = []
-    try:
-        with open(file_name, 'r') as file:
-            file.readline()  # Skip header
-            for line in file:
-                name, completion, priority, start_date = line.strip().split('\t')
-                projects.append(Project(name, completion, priority, start_date))
-    except FileNotFoundError:
-        print(f"File {file_name} not found.")
-    return projects
+class ProgrammingLanguage:
+    """Represent information about a programming language."""
 
-def save_projects(file_name, projects):
-    with open(file_name, 'w') as file:
-        file.write("Name\tCompletion\tPriority\tStart Date\n")
-        for project in projects:
-            file.write(f"{project.name}\t{project.completion}\t{project.priority}\t{project.start_date.strftime('%d/%m/%Y')}\n")
-def display_projects(projects):
-    print("Displaying all projects:")
-    for project in projects:
-        print(project)
-def filter_projects_by_date(projects, date_filter):
-    filtered_projects = [project for project in projects if project.start_date > date_filter]
-    print("Filtered Projects:")
-    for project in filtered_projects:
-        print(project)
-def add_new_project(projects):
-    name = input("Enter the project name: ")
-    completion = int(input("Enter the completion percentage: "))
-    priority = int(input("Enter the priority: "))
-    start_date = input("Enter the start date (d/m/yyyy): ")
-    projects.append(Project(name, completion, priority, start_date))
-    print("New project added successfully.")
-def update_project(projects):
-    project_name = input("Enter the project name to update: ")
-    for project in projects:
-        if project.name.lower() == project_name.lower():
-            new_completion = int(input("Enter the new completion percentage: "))
-            new_priority = int(input("Enter the new priority: "))
-            project.completion = new_completion
-            project.priority = new_priority
-            print("Project updated successfully.")
-            return
-    print("Project not found.")
+    def __init__(self, name, typing, reflection, pointer_arithmetic, year):
+        """Construct a ProgrammingLanguage from the given values."""
+        self.name = name
+        self.typing = typing
+        self.reflection = reflection
+        self.pointer_arithmetic = pointer_arithmetic
+        self.year = year
+
+    def __str__(self):
+        """Return string representation of a ProgrammingLanguage."""
+        return f"{self.name}, {self.typing} Typing, Reflection={self.reflection}, " \
+               f"Pointer Arithmetic={self.pointer_arithmetic}, First appeared in {self.year}"
+
+    def is_dynamic(self):
+        """Determine if language is dynamically typed."""
+        return self.typing == "Dynamic"
+
+
+def run_tests():
+    """Run simple tests/demos on ProgrammingLanguage class."""
+    ruby = ProgrammingLanguage("Ruby", "Dynamic", True, False, 1995)
+    python = ProgrammingLanguage("Python", "Dynamic", True, False, 1991)
+    visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, False, 1991)
+
+    languages = [ruby, python, visual_basic]
+    print(python)
+
+    print("The dynamically typed languages are:")
+    for language in languages:
+        if language.is_dynamic():
+            print(language.name)
+
 
 if __name__ == "__main__":
-    main()
+    run_tests()

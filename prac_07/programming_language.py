@@ -20,6 +20,10 @@ def save_projects(file_name, projects):
         file.write("Name\tCompletion\tPriority\tStart Date\n")
         for project in projects:
             file.write(f"{project.name}\t{project.completion}\t{project.priority}\t{project.start_date.strftime('%d/%m/%Y')}\n")
+def display_projects(projects):
+    print("Displaying all projects:")
+    for project in projects:
+        print(project)
 
 if __name__ == "__main__":
     main()

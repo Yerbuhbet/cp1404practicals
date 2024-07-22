@@ -15,7 +15,8 @@ class Guitar:
 
     def get_age(self):
         """Get the age of the guitar in years."""
-        return 2022 - self.year  # or you can use datetime module to get the current year
+        current_year = 2023  # update this to the current year as needed
+        return current_year - self.year
 
     def is_vintage(self):
         """Determine if the guitar is vintage (50 or more years old)."""
@@ -24,3 +25,7 @@ class Guitar:
     def __str__(self):
         """Return a string representation of the guitar."""
         return f"{self.name} ({self.year}) : ${self.cost:,.2f}"
+
+    def __lt__(self, other):
+        """Less than, used for sorting Guitars by year."""
+        return self.year < other.year

@@ -24,6 +24,11 @@ def display_projects(projects):
     print("Displaying all projects:")
     for project in projects:
         print(project)
+def filter_projects_by_date(projects, date_filter):
+    filtered_projects = [project for project in projects if project.start_date > date_filter]
+    print("Filtered Projects:")
+    for project in filtered_projects:
+        print(project)
 
 if __name__ == "__main__":
     main()

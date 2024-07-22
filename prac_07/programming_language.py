@@ -29,6 +29,13 @@ def filter_projects_by_date(projects, date_filter):
     print("Filtered Projects:")
     for project in filtered_projects:
         print(project)
+def add_new_project(projects):
+    name = input("Enter the project name: ")
+    completion = int(input("Enter the completion percentage: "))
+    priority = int(input("Enter the priority: "))
+    start_date = input("Enter the start date (d/m/yyyy): ")
+    projects.append(Project(name, completion, priority, start_date))
+    print("New project added successfully.")
 
 if __name__ == "__main__":
     main()

@@ -12,7 +12,7 @@ def main():
     print("\nGuitars sorted by year (oldest to newest):")
     display_guitars(guitars)
 
-
+    # Add new input
     guitars += get_new_guitars()
 
 

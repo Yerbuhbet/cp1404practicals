@@ -36,6 +36,17 @@ def add_new_project(projects):
     start_date = input("Enter the start date (d/m/yyyy): ")
     projects.append(Project(name, completion, priority, start_date))
     print("New project added successfully.")
+def update_project(projects):
+    project_name = input("Enter the project name to update: ")
+    for project in projects:
+        if project.name.lower() == project_name.lower():
+            new_completion = int(input("Enter the new completion percentage: "))
+            new_priority = int(input("Enter the new priority: "))
+            project.completion = new_completion
+            project.priority = new_priority
+            print("Project updated successfully.")
+            return
+    print("Project not found.")
 
 if __name__ == "__main__":
     main()

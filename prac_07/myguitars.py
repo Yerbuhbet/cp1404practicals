@@ -12,10 +12,10 @@ def main():
     print("\nGuitars sorted by year (oldest to newest):")
     display_guitars(guitars)
 
-    # Add new guitars from user input
+
     guitars += get_new_guitars()
 
-    # Write all guitars back to the file
+
     save_guitars("guitars.csv", guitars)
 
 

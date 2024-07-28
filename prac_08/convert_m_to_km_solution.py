@@ -30,8 +30,9 @@ class MilesConverterApp(App)
 from kivy.app import App, Builder
 
 __author__ = 'Lindsay Ward'
+__changes_by__ = 'Yerbuhbet'
 
-MILES_TO_KM = 1.60934
+MILES_TO_KM = 1.60934 # Conversion factor for miles to kilometers.
 
 
 class MilesConverterApp(App):
@@ -53,8 +54,8 @@ class MilesConverterApp(App):
         handle up/down button press, update the text input with new value, call calculation function
         :param change: the amount to change
         """
-        value = self.get_validated_miles() + change
-        self.root.ids.input_miles.text = str(value)
+        value = self.get_validated_miles() + change # Increment or decrement the input miles value.
+        self.root.ids.input_miles.text = str(value) # Update the input miles field
         self.handle_calculate()
 
     def get_validated_miles(self):

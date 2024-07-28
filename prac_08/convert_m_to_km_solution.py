@@ -1,7 +1,30 @@
 """
-CP1404 Week 11 Workshop - GUI program to convert miles to kilometres
-Lindsay Ward, IT@JCU
-06/10/2015
+Estimated time: 45 minutes
+Actual time: 40 minutes
+Pseudocode:
+MILES_TO_KM = 1.60934
+class MilesConverterApp(App)
+    function build(self)
+        self.title = "Convert Miles to Kilometres"
+        self.root = Builder.load_file('convert_miles_km.kv')
+        return self.root
+
+    function handle_calculate(self)
+        value = self.get_valid_input()
+        result = value * MILES_TO_KM
+        self.root.ids.output_label.text = str(result)
+
+    function handle_increment(self, change)
+        value = self.get_valid_input() + change
+        self.root.ids.input_miles.text = str(value)
+        self.handle_calculate()
+
+    function get_valid_input(self)
+        try
+            value = float(self.root.ids.input_miles.text)
+            return value
+        except ValueError
+            return 0
 """
 
 from kivy.app import App

@@ -27,8 +27,7 @@ class MilesConverterApp(App)
             return 0
 """
 
-from kivy.app import App
-from kivy.lang import Builder
+from kivy.app import App, Builder
 
 __author__ = 'Lindsay Ward'
 

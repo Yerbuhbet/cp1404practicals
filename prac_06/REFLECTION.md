@@ -23,3 +23,4 @@ I need to stop relying heavily on online tutorials and solutions for my assignme
 
 I suggest incorporating more real-world projects and case studies into the curriculum. This would provide practical experience and help students understand how the theoretical concepts apply in real-world scenarios. Additionally, more opportunities for collaborative projects would be beneficial, as teamwork is a crucial skill in the IT industry.
 
+

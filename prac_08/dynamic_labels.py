@@ -8,10 +8,13 @@ class DynamicLabelsApp(App):
         main_layout = BoxLayout(orientation='vertical')
 
         for name in names:
-            label = Label(text=name, font_size=20)
-            main_layout.add_widget(label)
+            self.create_label(name, main_layout)
 
         return main_layout
+
+    def create_label(self, name, layout):
+        label = Label(text=name, font_size=20)
+        layout.add_widget(label)
 
 if __name__ == '__main__':
     DynamicLabelsApp().run()

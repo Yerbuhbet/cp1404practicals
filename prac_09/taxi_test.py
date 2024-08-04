@@ -1,11 +1,11 @@
-# Import the Taxi class from taxi module
 from taxi import Taxi
 
 def main():
     test_taxi()
+    
 def test_taxi():
-    # Create a new taxi object named 'Prius 1' with 100 units of fuel and a fare price of $1.23 per km
-    my_taxi = Taxi("Prius 1", 100, 1.23)
+    # Create a new taxi object named 'Prius 1' with 100 units of fuel
+    my_taxi = Taxi("Prius 1", 100)
 
     # Drive the taxi 40 km
     my_taxi.drive(40)

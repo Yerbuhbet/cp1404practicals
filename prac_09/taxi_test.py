@@ -1,24 +1,29 @@
-from prac_09.taxi import Taxi
+# taxi.py
+from prac_09.car import Car
 
-def main():
-    # Create a new taxi object, my_taxi, with name "Prius 1", 100 units of fuel
-    my_taxi = Taxi("Prius 1", 100)
+class Taxi(Car):
+    """Specialised version of a Car that includes fare costs."""
+    price_per_km = 1.23
 
-    # Drive the taxi 40 km
-    my_taxi.drive(40)
+    def __init__(self, name, fuel):
+        """Initialise a Taxi instance, based on parent class Car."""
+        super().__init__(name, fuel)
+        self.current_fare_distance = 0
 
-    # Print the taxi's details and the current fare
-    print(my_taxi)
-    print(f"Current fare: ${my_taxi.get_fare():.2f}")
+    def __str__(self):
+        """Return a string like a Car but with current fare distance."""
+        return f"{super().__str__()}, {self.current_fare_distance}km on current fare, ${self.price_per_km:.2f}/km"
 
-    # Restart the meter (start a new fare) and then drive the car 100 km
-    my_taxi.start_fare()
-    my_taxi.drive(100)
+    def get_fare(self):
+        """Return the price for the taxi trip."""
+        return self.price_per_km * self.current_fare_distance
 
-    # Print the details and the current fare
-    print(my_taxi)
-    print(f"Current fare: ${my_taxi.get_fare():.2f}")
+    def start_fare(self):
+        """Begin a new fare."""
+        self.current_fare_distance = 0
 
-
-if __name__ == "__main__":
-    main()
+    def drive(self, distance):
+        """Drive like parent Car but calculate fare distance as well."""
+        distance_driven = super().drive(distance)
+        self.current_fare_distance += distance_driven
+        return distance_driven

@@ -2,7 +2,7 @@ from taxi import Taxi
 
 def main():
     test_taxi()
-    
+
 def test_taxi():
     # Create a new taxi object named 'Prius 1' with 100 units of fuel
     my_taxi = Taxi("Prius 1", 100)

@@ -45,5 +45,6 @@ def display_taxis(taxis):
     """Display the list of taxis with their current state."""
     for i, taxi in enumerate(taxis):
         print(f"{i} - {taxi}")
+
 if __name__ == "__main__":
     main()

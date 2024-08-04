@@ -1,4 +1,4 @@
-from silver_service_taxi import SilverServiceTaxi
+from prac_09.silver_service_taxi import SilverServiceTaxi
 
 def test_silver_service_taxi():
     # Create an instance of SilverServiceTaxi

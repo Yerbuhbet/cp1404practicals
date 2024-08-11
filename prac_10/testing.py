@@ -46,13 +46,21 @@ def run_tests():
     # using the value passed in or the default
     # You should test both of these
     test_car = Car(fuel=10)
+# Testing if Car sets fuel correctly when a value is passed in
+test_car = Car(fuel=10)
+assert test_car.fuel == 10, "Car does not set fuel correctly when a value is passed in."
+
+# Testing if Car sets fuel correctly when the default value is used
+test_car_default = Car()
+assert test_car_default.fuel == 0, "Car does not set fuel correctly when default value is used."
+
 
 
 run_tests()
 
 # TODO: 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
-# doctest.testmod()
+#doctest.testmod()
 
 # TODO: 4. Fix the failing is_long_word function
 # (don't change the tests, change the function!)

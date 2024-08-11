@@ -84,4 +84,8 @@ def format_sentence(phrase):
     >>> format_sentence('this is a test')
     'This is a test.'
     """
-    pass
+    # Capitalize the first letter and add a period if it's not already present.
+    sentence = phrase.capitalize()
+    if not sentence.endswith('.'):
+        sentence += '.'
+    return sentence
